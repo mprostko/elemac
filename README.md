@@ -1,5 +1,6 @@
 # Elemac SA-03 Ruby binding 
 Ruby binding for ELEMAC SA-03 aquarium controller.
+
 Manufacturer: http://www.elemac.pl/
 
 Gem provides a way to read memory of the aquarium controller. Memory addresses, offsets ect. were found from decompiling the original program which was written in C# and available only for MS Windows. Memory writing (currently disabled in code) is also possible although it might damage the controller and make it unusable.
@@ -19,7 +20,9 @@ Clone the repo. Build gem, install and use in your ruby scripts.
 
 ## Usage:
 
-> el = Elemac::Connection.new
-> x = Elemac::Sensors.new(device: el)
-> x.temp1.value
-> x.ph1.inspect
+```ruby
+el = Elemac::Connection.new
+x = Elemac::Sensors.new(device: el)
+x.temp1.value
+x.ph1.inspect
+```
